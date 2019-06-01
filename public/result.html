@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <title>Result page</title>
+        <link rel="stylesheet" href="stylesheets/result.css">
+        <script src="javascripts/result.js"></script>
+    </head>
+    <body>
+        <div class="tab">
+            <button class="tablinks" onclick="openContent(event,'Cost')">Cost</button>
+            <button class="tablinks" onclick="openContent(event,'Date')">Date</button>
+            <button class="tablinks" onclick="openContent(event,'People')">People</button>
+            <button class="tablinks" onclick="openContent(event,'Rating')">Rating</button>
+        </div>
+
+        <div id="Cost" class="tabcontent">
+            <h3>Cost</h3>
+            <form action="" method="">
+                <input type="checkbox" name="Cost" value="$">$<br/>
+                <input type="checkbox" name="Cost" value="$$">$$<br/>
+                <input type="checkbox" name="Cost" value="$$$">$$$<br/>
+            </form>
+        </div>
+
+        <div id="Date" class="tabcontent">
+            <h3>Date</h3>
+            <form action="" method="">
+                <input type="Date" name="Date"><br/>
+            </form>
+        </div>
+
+        <div id="People" class="tabcontent">
+            <h3>People</h3>
+            <form action="" method="">
+                <input type="text" placeholder="Number">
+            </form>
+        </div>
+
+        <div id="Rating" class="tabcontent">
+            <h3>Rating</h3>
+            <form action="" method="">
+                <input type="checkbox" name="Rating" value="*">*<br/>
+                <input type="checkbox" name="Rating" value="**">**<br/>
+                <input type="checkbox" name="Rating" value="***">***<br/>
+                <input type="checkbox" name="Rating" value="****">****<br/>
+                <input type="checkbox" name="Rating" value="*****">*****<br/>
+            </form>
+        </div>
+
+        <div id="RestaurantBox">
+            <div id="Image">
+                <img alt="image" style ="width:150px;height:150px;float:left">
+                <div id="DescriptionBox"><h3>Description Box</h3></div>
+            </div>
+        </div>
+
+        <div class="Center">
+            <button type="submit" title="Expand" class="Arrow_Down">&#x2193;</button>
+        </div>
+    </body>
+</html>
