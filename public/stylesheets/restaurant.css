@@ -6,17 +6,21 @@
     font-family: Arial;
 }
 
-html, body {
+  html, body {
     height: 100%;
     position: relative;
-}
+  }
 
-body {
-    background: url("https://cdn.pixabay.com/photo/2016/03/06/06/42/low-poly-1239778_960_720.jpg");
+  body {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/23298a55526729.5988857400116.jpg");
     background-size: cover;
-    padding: 0.6em;
-}
+  }
 
+  h1 {
+    font-size: 2em;
+  }
 #form {
     width: 90%;
     max-width: 700px;
