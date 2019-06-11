@@ -9,7 +9,7 @@
     <body>
 
     <div>
-        <img src="images/logo.png" id="logoImage"alt="image"onclick="window.location = 'index.html'"/>
+        <img src="images/logo.png" id="logoImage"alt="image"onclick="window.location = 'index.html'" style="margin-left: 1em"/>
         
 
         <div id="login" title="Log In" onclick="window.location = 'signin.html'">Log In</div>
@@ -23,7 +23,7 @@
         <br/>
         <div id = "bannerContainerDiv">
 
-        <div id="descriptionBox"> 
+        <div id="descriptionBox" style="display: none"> 
 <p></br>Pop in for a quick snack or stay for a leisurely breakfast, 
 lunch or dinner – the whole family is welcome. 
 To keep the little ones happy we have highchairs, 
@@ -94,8 +94,52 @@ Restaurant SA 5002</br>
 
 </br>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWJ8b4N_Lj0e6rr3ki4atTIOvvJ4zQWSc&callback=initMap"
-async defer></script>
+
+<script>
+    var map;
+
+function initMap() {
+
+map = new google.maps.Map(document.getElementById('map'), {
+center: {lat: -34.397, lng: 150.644},
+zoom: 8
+});
+}
+
+function imageClick(url) {
+    window.location = url;
+}
+
+function submitBooking(){
+    var guests = document.getElementById("numberGuests").value;
+    if (guests < 1 || guests > 30){
+    alert('Invalid amount of guests, must be greater than 0');
+    }
+    var time = document.getElementById("startTime").value;
+    if (time < "09:30" || time > "21:00"){
+        alert("Invalid time input, check open times");
+    }
+    var currentDate = newDate();
+    /*var day = currentDate.getDate();
+    var month = currentDate.getMonth()+1; //January is 0
+    var year = currentDate.getFullYear();
+    if(day<10){
+        day='0'+day
+    } 
+    if(month<10){
+       month='0'+month
+    }
+     currentDate = year+'-'+month+'-'+day;
+    document.getElementById("selectedDate").setAttribute("min",currentDate);*/
+    //var bookingDate = document.getElementById("selectedDate").value;
+    //if(!bookingDate){
+    //alert("hello");
+//}
+}
+</script>
+
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWJ8b4N_Lj0e6rr3ki4atTIOvvJ4zQWSc&callback=initMap"
+  type="text/javascript"></script>
 
 </br>
 </div>

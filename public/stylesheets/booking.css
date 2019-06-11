@@ -15,8 +15,8 @@
   body {
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/23298a55526729.5988857400116.jpg");
-    background-size: cover;
+    //background: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg");
+    background-size: fixed;
   }
 
   h1 {
@@ -68,25 +68,25 @@
     margin-left: 200px;
     padding:  15px;
     text-align: center;
-    background-color: darkgreen;
+    //background-color: darkgreen;
   }
 
-        #openBox {
-          width: 500px;
-          border: 2px solid black;
-          border-right: 0px;
-          display: inline-block;
-          background-color: darkred;
-        }
+  #openBox {
+    width: 500px;
+    border: 2px solid black;
+    border-right: 0px;
+    display: inline-block;
+    background-color: grey;
+  }
 
-        #contactBox {
-          /*display: flex;*/
-          display: inline-block;
-          flex: 1;
-          text-align: center;
-          border: 2px solid black;
-          background-color: darkred;
-        }
+  #contactBox {
+    /*display: flex;*/
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    border: 2px solid black;
+    background-color: grey;
+  }
 
         #reviewBox {
         width: 340px;
@@ -105,7 +105,7 @@
 
         #backgroundDiv {
           margin: 15px;
-          background-color: darkgreen;
+          background-color: grey;
         }
 
         #reviewDiv {
@@ -114,7 +114,9 @@
         }
 
         #insideDiv{
-          background-color: darkred;
+          background-image: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg");
+          background-size: cover;
+          //background-color: darkred;
           margin: 15px;
         }
 
