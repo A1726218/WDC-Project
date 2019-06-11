@@ -1,80 +1,104 @@
-
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
     <head>
-        <!-- <meta name="viewport" content="initial-scale=1.0"> -->
+        <title> Bookings </title>
+        <meta name="viewport" content="initial-scale=1.0">
         <meta charset="UTF-8">
-        <title>Bookings</title>
         <link rel="stylesheet" href="stylesheets/booking.css">
     </head>
     <body>
-        <div id = "topBackgroundDiv">
-            <div id="image">
-                <img src="images/logo.png" alt="image" style="width:320px;height:300px;float:left">
-            </div>
-            <div id="descriptionBox"> 
-                <p>Pop in for a quick snack or stay for a leisurely breakfast, lunch or dinner – the whole family is welcome. To keep the little ones happy we have highchairs, changing areas and a play area, plus FREE organic baby food with any adult meal purchased. Among the Swedish-style dishes and local specials on the menu</p>  
-            </div>
-        </div>
-        <br/>
-        <br/>
-        <div id="map"></div>
-        <br/>
-        <div id="backgroundDiv">
-            <br/>
-            <div id="insideDiv">
-                <br/>
-                <div id="detailBox"> 
-                    <div id="openBox"><h1>Open Times</h1>
-                        <p>
-                            Monday 09:30 - 21:00<br/>
-                            Tuesday 09:30 - 21:00<br/>
-                            Wednesday 09:30 - 21:00<br/>
-                            Thursday 09:30 - 21:00<br/>
-                            Friday 09:30 - 21:00<br/>
-                            Saturday 08:30 - 21:00<br/>
-                            Sunday 10:00 - 16:30<br/>
-                        </p>
-                    </div>
-                    <div id="contactBox"><h1>Contact Details</h1>
-                        <p>
-                            Adelaide Centre Restaurant and Cafe<br/>
-                            Adelaide Centre Lookout<br/>
-                            Restaurant Road, Restaurant SA 5002<br/>
-                            (08) 8298 8245<br/>
-                            info@adelaidecentre.com.au<br/>
-                            PO Box 108<br/>
-                            Restaurant SA 5002<br/>
-                        </p>
-                    </div>
-                </div>
-                <br/>
-                <div id="bookingDiv">
-                    <form id="bookingInfo">
-                        Number of Guests:<input type="number" name="bookingGuests" style="width: 300px; height: 51px"> 
-                        <label for="startTime">Time:</label>
-                        <input type="time" id="startTime" name="bookingTime" style="width: 300px; height: 51px">
-                        Date: <input type="date" name="bookingDate" style="width: 300px; height: 51px">
-                        <br/>
-                        <br/>
-                        <input type="button" form="bookingInfo" value="Book" id="bookingButton" onclick=""></button>
-                    </form>
-                </div>
-                <br/>
-                <div id="reviewDiv">
-                    <h1>Review</h1>
-                    <form>
-                        <br/>
-                        <input type="text" name="tReview" id="reviewBox">
-                        <input type="button" value="Submit">
-                    </form>
-                </div>
-                <br/>
-            </div>
-            <br/>
-        </div>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWJ8b4N_Lj0e6rr3ki4atTIOvvJ4zQWSc&callback=initMap" async defer></script>
-        <script src="javascripts/booking.js"></script> 
+    <div>
+        <img src="images/logo.png" id="logoImage"alt="image"onclick="window.location = 'index.html'"/>
+        
+
+        <div id="login" title="Log In" onclick="window.location = 'signin.html'">Log In</div>
+        <div id="create" title="Home" onclick="window.location = 'index.html'">Home</div>
+        <div id="create" title="Create" onclick="window.location = 'restaurant.html'">Create</div>
+        <div id="create" title="Booking" onclick="window.location = 'booking.html'">Booking</div>
+    </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div id = "bannerContainerDiv">
+
+        <div id="descriptionBox"> 
+<p></br>Pop in for a quick snack or stay for a leisurely breakfast, 
+lunch or dinner – the whole family is welcome. 
+To keep the little ones happy we have highchairs, 
+changing areas and a play area, 
+plus FREE organic baby food with any adult meal purchased. 
+Among the Swedish-style dishes and local specials on the menu </p>  
+        </div>
+    </div></br></br>
+
+    <div id="map"></div></br>
+
+    <div id="backgroundDiv"></br>
+        <div id="insideDiv"></br>
+            <div id="detailBox"> 
+                <div id="openBox"><h1> Open Times </h1>
+<p>
+Monday 09:30 - 21:00</br>Tuesday 09:30 - 21:00</br>
+Wednesday 09:30 - 21:00</br>Thursday 09:30 - 21:00</br>
+Friday 09:30 - 21:00</br>Saturday 08:30 - 21:00</br>
+Sunday 10:00 - 16:30</br>
+</p>
+                </div>
+                
+                <div id="contactBox"><h1>Contact Details </h1>
+<p>
+Adelaide Centre Restaurant and Cafe </br>Adelaide Centre Lookout </br>
+Restaurant Road, Restaurant SA 5002</br>(08) 8298 8245</br>
+info@adelaidecentre.com.au</br>PO Box 108</br>
+Restaurant SA 5002</br>
+</p>
+                </div>
+            </div>
+
+        </br>
+            <div id="bookingDiv">
+
+        <form id="bookingInfo">
+
+            Number of Guests:
+            <input type="number" name="bookingGuests" id="numberGuests" style="width: 300px; height: 51px"> 
+            <label for="startTime">
+            Time: 
+            </label>
+            <input type="time" id="startTime" name="bookingTime" style="width: 300px; height: 51px">
+            Date: 
+            <input type="date" id="selectedDate" name="bookingDate" style="width: 300px; height: 51px">
+            </br>
+            </br>
+            <input type="button" form="bookingInfo" value="Book" id="bookingButton" onclick="submitBooking()"></button>
+
+        </form>
+
+            </div>
+
+        <br>
+
+    </div><br>
+</div>
+            <div id="reviewDiv">
+        <h1> Review </h1>
+
+        <form>
+            </br>
+            <input type="text" name="tReview" id="reviewBox">
+            <input type="button" value="Submit">
+        </form>
+            </div>
+
+</br>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWJ8b4N_Lj0e6rr3ki4atTIOvvJ4zQWSc&callback=initMap"
+async defer></script>
+
+</br>
+</div>
+ <script src="javascript/booking.js"></script> 
     </body>
 </html>

@@ -89,3 +89,10 @@ body {
     width: 10%;
     border-left: none;
 }
+
+#logoImage{
+    margin-top: -20px;
+    width:100px;
+    height:100px;
+    float:left
+  }

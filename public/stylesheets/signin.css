@@ -34,3 +34,37 @@ div.Login {
     background-color: #f2f2f2;
     padding: 2%;
 }
+
+#logoImage{
+    margin-top: -20px;
+    width:100px;
+    height:100px;
+    float:left
+  }
+
+#create, #login {
+  width: 20%;
+  max-width: 100px;
+  float: right;
+  margin: 0.3em 0.3em 0 0;
+  border-radius: 0.3em;
+  }
+
+#create, #login {
+    height: 35px;
+    line-height: 35px;
+    font-size: 1em;
+}
+
+#create, #login, #search button, #filter {
+    text-align: center;
+    background-color: #0da100;
+    color: #f2f2f2;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#create:hover, #login:hover, #search button:hover, #filter:hover {
+    background-color: #10bd00;
+    color: white;
+}
