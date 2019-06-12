@@ -150,3 +150,19 @@
     background-color: #10bd00;
     color: white;
 }
+
+.blogPost {
+  background-color: grey;
+  text-align: center;
+  width: 340px;
+  height: 200px;
+  margin: 1em;
+}
+
+.textarea {
+  background-color: grey;
+  text-align: center;
+  width: 340px;
+  height: 200px;
+  margin: 1em;
+}
