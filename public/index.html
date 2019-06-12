@@ -26,11 +26,11 @@
                     <input v-model="searchterm" type="text" onkeyup="searchRestaurants()" placeholder="Search for your favourite restaurants!" title="Search">
                     <button type="submit" title="Search"><i class="fas fa-search"></i></button>
                 </div>
-                <div id="filter">
+                <!-- <div id="filter">
                     <div id="price">
                         FILTER
                     </div>
-                </div>
+                </div> -->
                 <div id="result">
                     <result v-for="result in results" v-bind:result="result"></result>
                 </div>

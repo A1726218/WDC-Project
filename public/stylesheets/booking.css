@@ -1,29 +1,62 @@
-/* body{
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
 }
 
-h1{
+html, body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg"); */
+    background-size: fixed;
+}
+
+h1 {
     font-size: 2em;
-} */
+}
+
+#bannerContainerDiv {
+    margin: 15px;
+    height: 300px;
+    background-image: url("https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+}
 
 #map {
-    width: 1000px;
+    margin: 15px;
+    width: 100% - 15px;
     height: 320px;
 }
 
+#logoImage{
+    margin-top: -20px;
+    width:100px;
+    height:100px;
+    float:left
+}
+
 #image {
-    width: 320px;
-    height: 300px;
+    width: 200px;
+    height:200px;
     display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 #descriptionBox {
-    width: 1000px;
-    height: 200px;
+    color: white;
+    margin-top: 10px;
+    width: 1170px;
+    height: 125px;
     display: inline-block;
+    background-color: rgba(0,100,0,0.8);
     vertical-align: top;
-    /*background-color: darkred;*/
 }
 
 #detailBox{
@@ -31,9 +64,9 @@ h1{
     height: 330px;
     display: flex;
     margin-left: 200px;
-    padding:    15px;
+    padding:  15px;
     text-align: center;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
 }
 
 #openBox {
@@ -41,7 +74,7 @@ h1{
     border: 2px solid black;
     border-right: 0px;
     display: inline-block;
-    background-color: darkred;
+    background-color: grey;
 }
 
 #contactBox {
@@ -50,12 +83,12 @@ h1{
     flex: 1;
     text-align: center;
     border: 2px solid black;
-    background-color: darkred;
+    background-color: grey;
 }
 
-#reviewBox {    
-    width: 320px;
-    height: 400px;
+#reviewBox {
+    width: 340px;
+    height: 200px;
 }
 
 #bookingButton {
@@ -68,13 +101,9 @@ h1{
     height: 51px;
 }
 
-/* #topBackgroundDiv {
-    margin: 15px;
-} */
-
 #backgroundDiv {
-    /*margin: 15px;*/
-    background-color: darkgreen;
+    margin: 15px;
+    background-color: grey;
 }
 
 #reviewDiv {
@@ -82,10 +111,55 @@ h1{
 }
 
 #insideDiv{
-    background-color: darkred;
-    /* margin: 15px; */
+    background-image: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg");
+    background-size: cover;
+    /* background-color: darkred; */
+    margin: 15px;
 }
 
 #bookingDiv{
     text-align: center;
+}
+
+#create, #login {
+    width: 20%;
+    max-width: 100px;
+    float: right;
+    margin: 0.3em 0.3em 0 0;
+    border-radius: 0.3em;
+}
+
+#create, #login {
+    height: 35px;
+    line-height: 35px;
+    font-size: 1em;
+}
+
+#create, #login, #search button, #filter {
+    text-align: center;
+    background-color: #0da100;
+    color: #f2f2f2;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#create:hover, #login:hover, #search button:hover, #filter:hover {
+    background-color: #10bd00;
+    color: white;
+}
+
+.blogPost {
+    background-color: grey;
+    text-align: center;
+    width: 340px;
+    height: 200px;
+    margin: 1em;
+}
+
+.textarea {
+    background-color: grey;
+    text-align: center;
+    width: 340px;
+    height: 200px;
+    margin: 1em;
 }
