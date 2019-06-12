@@ -10,16 +10,31 @@ const CLIENT_ID = "";
 const {0Auth2Client} = require('google-auth-library');
 const client = new 0Auth2Client(CLIENT_ID);
        
-const users = [{username:"testuser", password:"", google"USER_GOOGLE_ID"}];
+const users = [{username:"testuser", password:"", google:"USER_GOOGLE_ID"}];
 const session = {};
 
-router.post('/login, asyn function(req,res) {
-            var user = null;
+router.post('/login, async function(req,res) {
+            
+            const user = null;
+            
             console.log(JSON.stringify(req.body));
             
             if(req.session.user !== undefined) {
                 console.log("Session Valid");
                 user = req.session.user;
+            
+            }else if{ req.body.username !== undefined && req.body.password !== undefined){
+                console.log("Username + Password recieved");
+                
+                for (var i=0; i < users.length; i++){
+                    
+                    if(user[i].username === req.body.username && user[i].password === req.body.password){
+                        console.log("Username + Password Valid");
+                        req.session.user = req.body.username;
+                        user = req.body.username;
+                    }
+                }
+                
             }else if{req.body.idtoken !== undefined) {
                 console.log("Google Token Recieved");
                 
