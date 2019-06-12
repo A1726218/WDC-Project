@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The Menu - Login</title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="javascripts/main.js" defer></script>
+    </head>
+    <body onload="startup('login')">
+        <div id="background"></div>
+        <div id="main">
+            <div id="nav">
+                <div id="logo" title="The Menu - Home" onclick="redirectPage('home')">
+                    <img src="images/logo.png"/>
+                    <div>THE MENU</div>
+                </div>
+                <div id="buttons">
+                    <div id="signin" v-bind:title="signintitle" v-on:click="signinonclick">{{signin}}</div>
+                    <div id="create" v-if="login" title="Create a restaurant" onclick="redirectPage('create')">Create</div>
+                </div>
+            </div>
+            <div id="message" v-if="response">{{response}}</div>
+            <div id="content">
+                <div id="register">
+                    <div class="heading" title="Register an account">Register</div>
+                    <div class="field">
+                        <label for="first_name" title="First name">First name</label>
+                        <input type="text" id="first_name" maxlength="50" placeholder="Your first name" title="First name">
+                    </div>
+                    <div class="field">
+                        <label for="last_name" title="Last name">Last name</label>
+                        <input type="text" id="last_name" maxlength="50" placeholder="Your last name" title="Last name">
+                    </div>
+                    <div class="field">
+                        <label for="email" title="Email">Email</label>
+                        <input type="text" id="email" maxlength="50" placeholder="Your email" title="Email">
+                    </div>
+                    <div class="field">
+                        <label for="password" title="Password">Password</label>
+                        <input type="password" id="password" maxlength="50" placeholder="Your password" title="Password">
+                    </div>
+                    <button type="submit" title="Register an account" onclick="register()">Register</button>
+                </div>
+                <div id="login">
+                    <div class="heading" title="Login to your account">Login</div>
+                    <div class="field">
+                        <label for="login_email" title="Email">Email</label>
+                        <input type="text" id="login_email" maxlength="50" placeholder="Your email" title="Email"> 
+                    </div>
+                    <div class="field">
+                        <label for="login_password" title="Password">Password</label>
+                        <input type="password" id="login_password" maxlength="50" placeholder="Your password" title="Password">
+                    </div>
+                    <button type="submit" title="Login to your account" onclick="login()">Login</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

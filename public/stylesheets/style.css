@@ -1,8 +1,362 @@
-body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    /* background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/23298a55526729.5988857400116.jpg"); */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
 }
 
-a {
-    color: #00B7FF;
+html, body, #main {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    overflow: hidden;
+}
+
+#background {
+    z-index: -1;
+    background-size: cover;
+    filter: blur(5px) brightness(80%);
+    opacity: 0.8;
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.enlarge {
+    animation: enlarge 10s linear;
+}
+
+@keyframes enlarge{
+    0% {
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+#main {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#nav {
+    position: relative;
+    height: 3em;
+    width: 100%;
+    background: #555555;
+}
+
+#logo {
+    position: absolute;
+    height: 100%;
+    padding: 0.2em;
+    padding-left: 0.5em;
+    cursor: pointer;
+}
+
+#buttons {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 0.4em;
+    padding-right: 0.5em;
+}
+
+#logo img {
+    display: inline-block;
+    height: 100%;
+}
+
+#logo div {
+    padding-left: 0.3em;
+    font-size: 1.3em;
+    height: 100%;
+    float: right;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+}
+
+#create, #signin {
+    display: inline-block;
+    height: 100%;
+    width: 45%;
+    min-width: 100px;
+    line-height: 2.2em;
+    border-radius: 0.3em;
+}
+
+#signin {
+    margin-left: 1em;
+    float: right;
+}
+
+#create, #signin, #search button, input[type=submit] {
+    text-align: center;
+    background-color: #0da100;
+    color: #f2f2f2;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#create:hover, #signin:hover, #search button:hover, input[type=submit]:hover {
+    background-color: #10bd00;
+    color: white;
+}
+
+#register, #login, #logout {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+#logout {
+    margin-top: 50px;
+}
+
+input[type=submit] {
+    width: 50%;
+    padding: 1.5% 1%;
+    margin: 1% 0;
+    border: none;
+    border-radius: 1%;
+    cursor: pointer;
+}
+
+#search {
+    width: 90%;
+    max-width: 700px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+}
+
+#searchbar {
+    width: 100%;
+    max-width: 700px;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#search input, #search button {
+    border: 1px solid black;
+    font-size: 1.25em;
+    float: left;
+    height: 100%;
+}
+
+#search input {
+    width: 90%;
+    background-color: #f2f2f2;
+    padding-left: 0.5em;
+}
+
+#search button {
+    width: 10%;
+    border-left: none;
+}
+
+#filter {
+    background: #ccc;
+    width: 100%;
+    height: 5em;
+    position: relative;
+    top: 1.5em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#result {
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+    top: 1.5em;
+}
+
+#result:last-child {
+    border-bottom: 1px solid black;
+}
+
+.result {
+    font-size: 1.1em;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 0.5em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+.result:hover {
+    background: #e6e6e6;
+}
+
+#message {
+    width: 45%;
+    max-width: 350px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 50px auto;
+    padding: 0.6em;
+    background-color: #e6e6e6;
+    height: 5%;
+    text-align: center;
+    cursor: default;
+}
+
+#content {
+    width: 90%;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 50px auto;
+    padding: 0.6em;
+    background-color: #e6e6e6;
+    height: 40%;
+}
+
+#form {
+    width: 90%;
+    max-width: 700px;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 50px auto;
+    padding: 0.6em;
+    background-color: #e6e6e6;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    cursor: default;
+}
+
+#form .heading {
+    font-size: 1.5em;
+}
+
+#register {
+    border-right: 1px solid black;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.3em 1.25em;
+}
+
+.field p {
+    font-size: 0.9em;
+}
+
+.field > p {
+    font-size: 1em;
+}
+
+.field input, .field textarea {
+    padding: 0.3em;
+    font-size: 0.9em;
+    background-color: #f2f2f2;
+    border: 1px solid gray;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cost {
+    width: 40%;
+}
+
+#days_open {
+    width: 60%;
+}
+
+#times {
+    width: 65%;
+}
+
+#times div {
+    display: flex;
+    align-items: center;
+}
+
+#times div p {
+    margin-right: 1.25em;
+    width: 50%;
+}
+
+#times div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.125em 0;
+}
+
+.checkbox div {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.field input[type="text"], .field input[type="number"], .field input[type="file"], .field textarea {
+    width: 20em;
+}
+
+.field textarea {
+    height: 7.5em;
+}
+
+#register input, #login input {
+    width: 12em;
+}
+
+#form button, #register button, #login button, #logout button {
+    width: 10em;
+    height: 2em;
+    margin: auto;
+    margin-top: 0.6em;
+    display: block;
+    text-align: center;
+    background-color: #0da100;
+    color: #f2f2f2;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#register button, #login button, #logout button {
+    margin-top: 1.2em;
+}
+
+#form button:hover, #register button:hover, #login button:hover, #logout button:hover {
+    background-color: #10bd00;
+    color: white;
 }

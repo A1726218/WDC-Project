@@ -2,18 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Main page</title>
+        <title>The Menu - Home</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="javascripts/main.js" defer></script>
     </head>
-    <body>
-        <div id="logo" title="Logo">Logo</div>
-        <div id="login" title="Log In">Log In</div>
-        <div id="create" title="Create">Create</div>
-        <form id="search">
-            <input type="text" placeholder="Search for your favourite restaurants!" title="Search">
-            <button type="submit" title="Search"><i class="fas fa-search"></i></button>
-            <div id="filter" title="Filter">Filter</div>
-        </form>
+    <body onload="startup('home')">
+        <div id="background"></div>
+        <div id="main">
+            <div id="nav">
+                <div id="logo" title="The Menu - Home" onclick="redirectPage('home')">
+                    <img src="images/logo.png"/>
+                    <div>THE MENU</div>
+                </div>
+                <div id="buttons">
+                    <div id="signin" v-bind:title="signintitle" v-on:click="signinonclick">{{signin}}</div>
+                    <div id="create" v-if="login" title="Create a restaurant" onclick="redirectPage('create')">Create</div>
+                </div>
+            </div>
+            <div id="search">
+                <div id="searchbar">
+                    <input v-model="searchterm" type="text" onkeyup="searchRestaurants()" placeholder="Search for your favourite restaurants!" title="Search">
+                    <button type="submit" title="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="filter">
+                    <div id="price">
+                        FILTER
+                    </div>
+                </div>
+                <div id="result">
+                    <result v-for="result in results" v-bind:result="result"></result>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
