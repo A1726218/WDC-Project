@@ -252,5 +252,17 @@ router.post("/update", function(req, res) {
     });
 });
 
+router.use (function(req, res, next){
+    if(req.session.user !== undefined){
+        next();
+    }else{
+        res.sendStatus(403);
+    }
+});
+
+router.get ('/', function(req,res,next){
+    res.send('Private information');
+});
+
 module.exports = router;
 module.exports.loggedInUsers = loggedInUsers;
