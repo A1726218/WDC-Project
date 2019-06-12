@@ -32,7 +32,7 @@ h1 {
     margin: 15px;
     width: 100% - 15px;
     height: 320px;
-}
+  }
 
 #logoImage{
     margin-top: -20px;
@@ -59,7 +59,19 @@ h1 {
     vertical-align: top;
 }
 
-#detailBox{
+  }
+
+ #descriptionBox {
+  color: white;
+  margin-top: 10px;
+  width: 1170px;
+  height: 125px;
+  display: inline-block;
+  background-color: rgba(0,100,0,0.8);
+  vertical-align: top;
+  }
+
+  #detailBox{
     width: 1000px;
     height: 330px;
     display: flex;
@@ -69,7 +81,7 @@ h1 {
     /* background-color: darkgreen; */
 }
 
-#openBox {
+  #openBox {
     width: 500px;
     border: 2px solid black;
     border-right: 0px;
@@ -77,7 +89,7 @@ h1 {
     background-color: grey;
 }
 
-#contactBox {
+  #contactBox {
     /*display: flex;*/
     display: inline-block;
     flex: 1;
@@ -91,23 +103,27 @@ h1 {
     height: 200px;
 }
 
-#bookingButton {
-    width: 100px;
-    height: 35px;
-}
+        #bookingButton {
+          width: 100px;
+          height: 35px;
+        }
 
-#ntdButtons {
-    width: 300px;
-    height: 51px;
-}
+        #ntdButtons {
+          width: 300px;
+          height: 51px;
+        }
 
 #backgroundDiv {
     margin: 15px;
     background-color: grey;
 }
 
-#reviewDiv {
+#create, #login, #search button, #filter {
     text-align: center;
+    background-color: #0da100;
+    color: #f2f2f2;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 #insideDiv{
@@ -117,8 +133,12 @@ h1 {
     margin: 15px;
 }
 
-#bookingDiv{
-    text-align: center;
+.blogPost {
+  background-color: grey;
+  text-align: center;
+  width: 340px;
+  height: 200px;
+  margin: 1em;
 }
 
 #create, #login {
